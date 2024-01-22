@@ -18,6 +18,33 @@
             Maximum="360"
             Minimum="0" />
 
+        <Label
+            x:Name="amazingLbl"
+            FontSize="15"
+            Opacity="1"
+            Rotation="0"
+            Text="Label" />
+
+        <Button
+            x:Name="btn"
+            BindingContext="{x:Reference heightSlider}"
+            HeightRequest="{Binding Value}"
+            Text="hi" />
+
+        <Slider
+            x:Name="heightSlider"
+            Maximum="400"
+            Minimum="100" />
+
+        <Slider
+            x:Name="opacitySlider"
+            BindingContext="{x:Reference amazingLbl}"
+            Maximum="1.0"
+            Minimum="0.0"
+            Value="{Binding Opacity}" />
+
+
+
 
     </StackLayout>
 
